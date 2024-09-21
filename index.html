@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradify - Institute Solutions</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: medium;
+            background-color: #f5e8d7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #201c29;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 24px;
+        }
+        nav ul {
+            max-width: fit-content;
+            list-style-type: none;
+            display: flex;
+            gap: 100px;
+            margin-left: 50px;
+        }
+
+        #text:hover{
+            color: aqua;
+        }
+       
+        nav ul li {
+            color: white;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+    
+
+        }
+        
+        .signup-btn {
+            background-color: #f6ead8;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .signup-btn:hover{
+            background-color: aquamarine;
+            color:green;
+        }
+        .container {
+            background: linear-gradient(135deg, #200a3f, #481057);
+            color: white;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .frontbox{
+            background: linear-gradient(135deg, #200a3f, #481057);
+            color: white;
+            display:flex;
+            flex-direction:row;
+        }
+        .heroimage{
+            width:50%
+        }
+        .content {
+            text-align: center;
+            max-width: 100%;
+        }
+        .content h2 {
+            font-size: 32px;
+        }
+        .content p {
+            color: #d1c4e9;
+        }
+        .content .buttons {
+            margin-top: 20px;
+        }
+        .tab-button {
+            background-color: #6e4385;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .tab-button.active {
+            background-color: #f6ead8;
+            color: black;
+        }
+        .cta-button {
+            background-color: #f6ead8;
+            color: black;
+            padding: 15px 30px ;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            margin-left: 300px;
+        }
+        .cta-button span {
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: medium;
+        }
+
+        .cta-button:hover{
+            background-color:aquamarine;
+            color:green;
+        }
+
+        #image{
+            width:100%;
+            height:70%;
+            object-fit:fill;
+            
+        }
+
+        #fc{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+        #fc{
+            font:200px;;
+            color: white;
+        }
+
+        #list{
+            margin-top: 30px;
+           font:100px;
+            
+        }
+        #l1{
+            margin-top: 15px;
+            text-justify:left;
+        }
+
+    
+        /* Feature Section */
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0;
+            width: 100%;
+        }
+        .feature-card {
+            background-color: #320e4f;
+            border-radius: 10px;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 28%;
+            height:400px;
+        }
+        .feature-card h3 {
+            margin: 10px 0;
+        }
+        .feature-card p {
+            color: #d1c4e9;
+        }
+
+        #bdbtn{
+            
+            margin-top:48px;
+            background-color: #f6ead8;
+            color: black;
+            padding: 15px 30px ;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            margin-left: 100px;
+           
+        }
+
+        #bdbtn:hover{
+            background-color:aquamarine;
+            color:green;
+        }
+
+        #bdbtn3{
+        
+            margin-top: 15px;
+            background-color: #f6ead8;
+            color: black;
+            padding: 15px 30px ;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           margin-left: 100px;
+           
+        }
+        #bdbtn3:hover{
+            background-color:aquamarine;
+            color:green;
+        }
+
+        #bdtext{
+            font-size: larger;
+        }
+
+      
+        
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            .features {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .feature-card {
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Footer CSS */
+        .footer {
+            background-color:#481057 ;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        .footer-section h3 {
+            margin-bottom: 15px;
+        }
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+        .logo-newsletter form {
+            display: flex;
+            margin-top: 10px;
+        }
+        .logo-newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            width: 200px;
+        }
+        .logo-newsletter button {
+            padding: 10px;
+            background-color: #6a4ec2;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            border-top: 1px solid #fff;
+            padding-top: 20px;
+        }
+        .footer-bottom a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><i>Gradify</i></h1>
+        <nav>
+            <ul>
+                <li><a id="text" href="#">Solutions</a></li>
+                <li><a id="text" href="#">Pricing</a></li>
+                <li><a id="text" href="#">About</a></li>
+            </ul>
+        </nav>
+        <button class="signup-btn" onclick="window.location.href='login.html'">Sign up</button>
+    </header>
+
+    <!-- Section 1: Flexible Solutions -->
+     <div class="frontbox">
+    <div class="container">
+        <div class="content">
+            <div class="buttons">
+                <button class="tab-button active" id="studentBtn">Student</button>
+                <button class="tab-button" id="alumniBtn">Alumni</button>
+            </div>
+            <h2>Flexible Solutions for Your Institute/University</h2>
+            <p>Join our community today and relive the memories, rebuild the networks, and recharge your passion by empowering lifelong connections.</p>
+            <button class="cta-button" onclick="window.location.href='login.html'">
+                <span>Start free today <span class="material-symbols-outlined">
+                    trending_flat
+                    </span></span>
+                <!-- <img src="arrow.png" alt="arrow" width="20"> -->
+            </button>
+        </div>
+    </div>
+    <div class="heroimage">
+        <img src="home_page_image.png">
+    </div>
+     </div>
+
+    <!-- Section 2: Reasons to choose Gradify -->
+    <div class="container">
+        <h1>Reasons to choose Gradify</h1>
+        <div class="features">
+            <div class="feature-card">
+                <h3>VIEW ALUMNI DIRECTORY</h3>
+                <img id="image" src="almuni1.jpg">
+                <p>Stay in touch with your alma mater's community, reconnect with old friends, and expand your professional network.</p>
+               
+            </div>
+            <div class="feature-card">
+                <h3>JOB PORTAL INTEGRATION</h3>
+                <img id="image" src="job.jpg">
+                <p>Boost your career prospects with our integrated job portal, featuring:</p>
+            </div>
+            <div class="feature-card">
+                <h3>EVENTS AND REUNIONS</h3>
+                <img id="image" src="reunious.jpg">
+                <p>Stay updated on upcoming events, reunions, and conferences.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>BEST DEALS</h1>
+        <div class="features">
+            <div class="feature-card">
+                <h2>FREE</h2>
+                <h1 id="fc">FREE</h1>
+                <ul id="list">
+                    <li id="l1">Almuni Directory Access</li>
+                    <li id="l1">Limited Job Portal Access</li>
+                    <li id="l1">Newsletter Subscription</li>
+                    <li id="l1">Event Calendars</li>
+                </ul>
+                <button id="bdbtn"><b id="bdtext">Start for free</b></span><span class="material-symbols-outlined"><span></span>
+                    trending_flat
+                    </span>
+            </div>
+            <div class="feature-card">
+                <h2>UNLIMITED</h2>
+                <h1 id="fc"><span class="material-symbols-outlined">
+                    currency_rupee
+                    </span id="fc">299/month</h1>
+                <ul id="list">
+                    <li id="l1">Full Job Portal Access</li>
+                    <li id="l1">Exclusive Event Discounts</li>
+                    <li id="l1">Mentorship Programs</li>
+                    <li id="l1">Advanced profile Features</li>
+                 </ul>
+                <button id="bdbtn"><b id="bdtext">Get Unlimited</b><span class="material-symbols-outlined"><span>
+                    trending_flat
+                    </span></button>
+            </div>
+            <div class="feature-card">
+                <h2>ENTERPRISE</h2>
+                <h1 id="fc"><span class="material-symbols-outlined">
+                    currency_rupee
+                    </span id="fc">499/month</h1>
+                <ul id="list">
+                    <li id="l1">Priority Access to All Events with Exclusive Discounts</li>
+                    <li id="l1">Priority Job Matching</li>
+                    <li id="l1">VIP Networking Opportunities</li>
+                    <li id="l1">Complimentary Professional development Resources
+                    </li>
+                </ul>
+                <button  id="bdbtn3"><b id="bdtext">Get Enterprise</b><span class="material-symbols-outlined"><span>
+                    trending_flat
+                    </span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Why others choose us?</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>AWESOME TOOL</h3>
+                <p>Stay in touch with your alma mater's community, reconnect with old friends, and expand your professional network.</p>
+            </div>
+            <div class="feature-card">
+                <h3>SUPER COOL</h3>
+                <p>Boost your career prospects with our integrated job portal, featuring:</p>
+            </div>
+            <div class="feature-card">
+                <h3>AWESOME TOOL</h3>
+                <p>Stay updated on upcoming events, reunions, and conferences.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section logo-newsletter">
+                <h3>Gradify</h3>
+                <p>Stay updated with our newsletter:</p>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gradify. All rights reserved.</p>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+    
+
+    <script>
+        const studentBtn = document.getElementById('studentBtn');
+        const alumniBtn = document.getElementById('alumniBtn');
+
+        studentBtn.addEventListener('click', function() {
+            studentBtn.classList.add('active');
+            alumniBtn.classList.remove('active');
+        });
+
+        alumniBtn.addEventListener('click', function() {
+            alumniBtn.classList.add('active');
+            studentBtn.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
